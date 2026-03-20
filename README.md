@@ -106,6 +106,8 @@ Credenciais:
 
 🔒 Esta conta possui acesso limitado para garantir a segurança do sistema.
 
+---
+
 ## 📷 Imagens do sistema
 
 ### 📊 Dashboard
@@ -117,8 +119,8 @@ Credenciais:
 ### 📦 Estoque
 ![Estoque](assets/estoque.png)
 
-### 🛍️ Produto
-![Produto](assets/produto.png)
+### 🛍️ Produtos
+![Produtos](assets/produto.png)
 
 ### 📈 Relatórios
 ![Relatórios](assets/relatorios.png)
