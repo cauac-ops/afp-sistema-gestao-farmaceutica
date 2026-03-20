@@ -126,7 +126,3 @@ define('DB_HOST', 'seu_host');
 define('DB_NAME', 'seu_banco');
 define('DB_USER', 'seu_usuario');
 define('DB_PASS', 'sua_senha');
-
-<p align="center">
-  <img src="assets/dashboard.png" width="700">
-</p>
