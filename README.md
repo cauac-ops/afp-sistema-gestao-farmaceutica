@@ -93,3 +93,15 @@ define('DB_HOST', 'seu_host');
 define('DB_NAME', 'seu_banco');
 define('DB_USER', 'seu_usuario');
 define('DB_PASS', 'sua_senha');
+
+## 🔐 Acesso de demonstração
+
+O sistema está disponível para testes:
+
+🌐 http://cacau.byethost6.com/login_afp.php
+
+Credenciais:
+- Usuário: teste
+- Senha: 1234
+
+🔒 Esta conta possui acesso limitado para garantir a segurança do sistema.
