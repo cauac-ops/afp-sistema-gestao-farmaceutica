@@ -79,21 +79,6 @@ O sistema possui controle de permissões por cargo:
 
 ---
 
-## ⚙️ Instalação e execução
-
-### 1. Banco de dados
-- Crie um banco no MySQL
-- Importe o script SQL do projeto
-
-### 2. Configuração
-Crie um arquivo `config.php` com suas credenciais:
-
-```php
-define('DB_HOST', 'seu_host');
-define('DB_NAME', 'seu_banco');
-define('DB_USER', 'seu_usuario');
-define('DB_PASS', 'sua_senha');
-
 ## 🔐 Acesso de demonstração
 
 O sistema está disponível para testes:
@@ -124,3 +109,20 @@ Credenciais:
 
 ### 📈 Relatórios
 ![Relatórios](assets/relatorios.png)
+
+---
+
+## ⚙️ Instalação e execução
+
+### 1. Banco de dados
+- Crie um banco no MySQL
+- Importe o script SQL do projeto
+
+### 2. Configuração
+Crie um arquivo `config.php` com suas credenciais:
+
+```php
+define('DB_HOST', 'seu_host');
+define('DB_NAME', 'seu_banco');
+define('DB_USER', 'seu_usuario');
+define('DB_PASS', 'sua_senha');
