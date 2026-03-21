@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Histórico de Vendas';
-require_once 'header_afp.php';
+require_once 'components/header_afp.php';
 
 $db   = new Database();
 $conn = $db->connect();
@@ -111,7 +111,7 @@ $total_val = array_sum(array_column($vendas, 'valor_total'));
   </div>
 </div>
 
-<!-- Modal Itens -->
+
 <div class="modal fade" id="modalItens" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -130,7 +130,7 @@ $total_val = array_sum(array_column($vendas, 'valor_total'));
 function verItens(id) {
   document.getElementById('itensContent').innerHTML =
     '<div class="text-center py-3"><div class="spinner-border text-success"></div></div>';
-  fetch('ajax_itens.php?id=' + id)
+  fetch('ajax/ajax_itens.php?id=' + id)
     .then(r => r.text())
     .then(html => document.getElementById('itensContent').innerHTML = html)
     .catch(() => document.getElementById('itensContent').innerHTML =
@@ -138,4 +138,4 @@ function verItens(id) {
 }
 </script>
 
-<?php require_once 'footer_afp.php'; ?>
+<?php require_once 'components/footer_afp.php'; ?>
