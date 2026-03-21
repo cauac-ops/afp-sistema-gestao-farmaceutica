@@ -1,9 +1,9 @@
 <?php
 $page_title = 'Relatórios';
-require_once 'header_afp.php';
+require_once 'components/header_afp.php';
 if (!in_array($_SESSION['cargo'] ?? '', ['Gerente', 'Administrador', 'Farmacêutico'])) {
     echo '<div class="alert alert-danger"><i class="bi bi-shield-lock me-2"></i>Acesso restrito.</div>';
-    require_once 'footer_afp.php'; exit;
+    require_once 'components/footer_afp.php'; exit;
 }
 
 $db   = new Database();
