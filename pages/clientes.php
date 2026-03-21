@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Clientes';
-require_once 'header_afp.php';
+require_once 'components/header_afp.php';
 
 $db   = new Database();
 $conn = $db->connect();
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// MySQL: LIKE (case-insensitive por padrão em utf8mb4)
+
 $busca = sanitize($_GET['busca'] ?? '');
 if ($busca) {
     $stmt = $conn->prepare("SELECT * FROM cliente WHERE nome_cli LIKE :b OR cpf_cli LIKE :b ORDER BY nome_cli");
@@ -105,7 +105,7 @@ if (!empty($_GET['ok'])) { $msg = htmlspecialchars($_GET['ok']); $tipo = 'succes
   </div>
 </div>
 
-<!-- Modal Cliente -->
+
 <div class="modal fade" id="modalCli" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -158,4 +158,4 @@ if (!empty($_GET['ok'])) { $msg = htmlspecialchars($_GET['ok']); $tipo = 'succes
 <?php if ($edit): ?>
 <script>document.addEventListener('DOMContentLoaded',()=>new bootstrap.Modal(document.getElementById('modalCli')).show())</script>
 <?php endif; ?>
-<?php require_once 'footer_afp.php'; ?>
+<?php require_once 'components/footer_afp.php'; ?>
