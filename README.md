@@ -277,20 +277,21 @@ The system includes role-based access control:
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation and Setup
 
 ### 1. Database
-- Create a MySQL database
-- Import the SQL script
+- Create a database in MySQL
+- Import the project's SQL script
 
-### 2. Configuration
-Create a `config.php` file:
+### 2. Environment Configuration
+- Create a file named `.env` in the project root (if it does not exist)
+- Configure the database connection variables:
 
-```php
-define('DB_HOST', 'your_host');
-define('DB_NAME', 'your_database');
-define('DB_USER', 'your_user');
-define('DB_PASS', 'your_password');
+```env
+DB_HOST=your_host
+DB_NAME=your_database
+DB_USER=your_user
+DB_PASS=your_password
 ```
 ### 3. Run
 - Use a local server (XAMPP, Laragon, WAMP)
