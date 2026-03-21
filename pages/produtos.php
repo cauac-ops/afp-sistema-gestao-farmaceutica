@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $categorias = $conn->query("SELECT * FROM categoria ORDER BY nome_cat")->fetchAll();
 
-// MySQL: LIKE em vez de ILIKE
+
 $busca = sanitize($_GET['busca'] ?? '');
 $cat_f = (int)($_GET['cat'] ?? 0);
 $eb_f  = $_GET['eb'] ?? '';
@@ -150,7 +150,7 @@ if (!empty($_GET['ok'])) { $msg = htmlspecialchars($_GET['ok']); $tipo = 'succes
   </div>
 </div>
 
-<!-- Modal Produto -->
+
 <div class="modal fade" id="modalProd" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
