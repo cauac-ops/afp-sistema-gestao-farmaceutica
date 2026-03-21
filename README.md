@@ -1,5 +1,10 @@
 # 💊 AFP — Sistema de Gestão Farmacêutica
 
+<p align="center">
+  <strong>💊 Pharmacy Management System</strong><br>
+  <em>Complete web system for pharmacy operations</em>
+</p>
+
 🇧🇷 Português | 🇺🇸 [English](#-english)
 
 > Sistema web completo para gestão de farmácias, com controle inteligente de estoque, vendas, clientes, agendamentos clínicos e relatórios gerenciais.
@@ -227,7 +232,7 @@ Este projeto está sob a licença MIT.
 - Quick search by name or CPF
 
 ### 📅 Appointments
-- Services: blood pressure, glucose tests, injections, dressings, etc.
+- Clinical services: blood pressure monitoring, glucose testing, injections, wound care, among others
 - Status control: Scheduled, Completed, Cancelled, No-show
 - Filters by date and status
 
@@ -294,13 +299,14 @@ define('DB_PASS', 'your_password');
 ---
 
 ## 🚀 Project Highlights
-🔐 **Role-based access control**
-📦 **Automatic stock updates**
-⚠️ **Smart alerts system**
-📊 **Real-time dashboard**
-📅 **Integrated modules**
-📈 **Advanced reports**
-🧩 **Modular architecture**
-💻 **User-friendly interface**
+
+- 🔐 **Role-based access control**
+- 📦 **Automatic stock updates**
+- ⚠️ **Smart alerts system**
+- 📊 **Real-time dashboard**
+- 📅 **Integrated modules**
+- 📈 **Advanced reports**
+- 🧩 **Modular architecture**
+- 💻 **User-friendly interface**
 
 ---
