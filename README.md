@@ -143,8 +143,7 @@ define('DB_HOST', 'seu_host');
 define('DB_NAME', 'seu_banco');
 define('DB_USER', 'seu_usuario');
 define('DB_PASS', 'sua_senha');
-```php
-
+```
 ---
 
 ## 📄 Licença
