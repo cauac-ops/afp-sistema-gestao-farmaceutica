@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once 'config.php';
-if (!isset($_SESSION['id_func'])) { header('Location: login_afp.php'); exit; }
+require_once 'config/config.php';
+if (!isset($_SESSION['id_func'])) { header('Location: public/login_afp.php'); exit; }
 
-// Atualiza cargo da sessão a cada request (caso tenha sido alterado)
+
 $_db_refresh = new Database();
 $_c_refresh  = $_db_refresh->connect();
 $_r = $_c_refresh->prepare("SELECT cargo, nome_func FROM funcionario WHERE id_func = :id AND ativo = 1");
@@ -13,14 +13,14 @@ if ($_row) {
     $_SESSION['cargo']     = $_row['cargo'];
     $_SESSION['nome_func'] = $_row['nome_func'];
 } else {
-    session_destroy(); header('Location: login_afp.php'); exit;
+    session_destroy(); header('Location: public/login_afp.php'); exit;
 }
 
-// Detect active page
+
 $current = basename($_SERVER['PHP_SELF']);
 function isActive($page) { global $current; return $current == $page ? 'active' : ''; }
 
-// Badges do sidebar
+
 $db_h = new Database();
 $c_h  = $db_h->connect();
 $ebq  = $c_h->query("SELECT COUNT(*) FROM produto WHERE estoque_atual <= estoque_minimo")->fetchColumn();
@@ -52,7 +52,7 @@ $initials = strtoupper(substr($_SESSION['nome_func'], 0, 1));
     * { box-sizing: border-box; }
     body { font-family: 'DM Sans', sans-serif; background: var(--bg); margin: 0; overflow-x: hidden; }
 
-    /* ---- SIDEBAR ---- */
+
     .sidebar {
       position: fixed; top: 0; left: 0; bottom: 0;
       width: 240px;
@@ -117,7 +117,7 @@ $initials = strtoupper(substr($_SESSION['nome_func'], 0, 1));
     }
     .btn-logout:hover { color: #fc8181; }
 
-    /* ---- MAIN ---- */
+
     .main-content { margin-left: 240px; min-height: 100vh; display: flex; flex-direction: column; }
     .topbar {
       background: white;
@@ -132,7 +132,7 @@ $initials = strtoupper(substr($_SESSION['nome_func'], 0, 1));
     .topbar-date { font-size: 13px; color: var(--gray); }
     .page-body { padding: 28px; flex: 1; }
 
-    /* ---- CARDS ---- */
+
     .stat-card {
       border-radius: 14px; padding: 22px;
       display: flex; flex-direction: column; gap: 4px;
@@ -155,7 +155,7 @@ $initials = strtoupper(substr($_SESSION['nome_func'], 0, 1));
 </head>
 <body>
 
-<!-- SIDEBAR -->
+
 <nav class="sidebar">
   <div class="sidebar-brand">
     <div class="brand-icon"><i class="bi bi-capsule"></i></div>
@@ -173,33 +173,33 @@ $initials = strtoupper(substr($_SESSION['nome_func'], 0, 1));
   </div>
   <nav class="sidebar-nav">
     <div class="sidebar-section">Principal</div>
-    <a href="dashboard.php"     class="nav-link-side <?= isActive('dashboard.php') ?>"><i class="bi bi-speedometer2"></i>Dashboard</a>
-    <a href="vendas.php"        class="nav-link-side <?= isActive('vendas.php') ?>"><i class="bi bi-cart-check"></i>Nova Venda</a>
-    <a href="historico_vendas.php" class="nav-link-side <?= isActive('historico_vendas.php') ?>"><i class="bi bi-receipt"></i>Histórico de Vendas</a>
+    <a href="pages/dashboard.php"     class="nav-link-side <?= isActive('dashboard.php') ?>"><i class="bi bi-speedometer2"></i>Dashboard</a>
+    <a href="pages/vendas.php"        class="nav-link-side <?= isActive('vendas.php') ?>"><i class="bi bi-cart-check"></i>Nova Venda</a>
+    <a href="pages/historico_vendas.php" class="nav-link-side <?= isActive('historico_vendas.php') ?>"><i class="bi bi-receipt"></i>Histórico de Vendas</a>
 
     <div class="sidebar-section">Cadastros</div>
-    <a href="produtos.php"      class="nav-link-side <?= isActive('produtos.php') ?>"><i class="bi bi-box-seam"></i>Produtos<?= $ebq > 0 ? "<span class='badge-side'>$ebq</span>" : '' ?></a>
-    <a href="clientes.php"      class="nav-link-side <?= isActive('clientes.php') ?>"><i class="bi bi-people"></i>Clientes</a>
+    <a href="pages/produtos.php"      class="nav-link-side <?= isActive('produtos.php') ?>"><i class="bi bi-box-seam"></i>Produtos<?= $ebq > 0 ? "<span class='badge-side'>$ebq</span>" : '' ?></a>
+    <a href="pages/clientes.php"      class="nav-link-side <?= isActive('clientes.php') ?>"><i class="bi bi-people"></i>Clientes</a>
     <?php if (in_array($_SESSION['cargo'] ?? '', ['Gerente', 'Administrador', 'Farmacêutico'])): ?>
-    <a href="funcionarios.php"  class="nav-link-side <?= isActive('funcionarios.php') ?>"><i class="bi bi-person-badge"></i>Funcionários</a>
+    <a href="pages/funcionarios.php"  class="nav-link-side <?= isActive('funcionarios.php') ?>"><i class="bi bi-person-badge"></i>Funcionários</a>
     <?php endif; ?>
 
     <div class="sidebar-section">Clínico</div>
-    <a href="agendamentos.php"  class="nav-link-side <?= isActive('agendamentos.php') ?>"><i class="bi bi-calendar-check"></i>Agendamentos<?= $ag_h > 0 ? "<span class='badge-side'>$ag_h</span>" : '' ?></a>
-    <a href="receitas.php"      class="nav-link-side <?= isActive('receitas.php') ?>"><i class="bi bi-file-medical"></i>Receitas<?= $rv_h > 0 ? "<span class='badge-side text-warning' style='background:#b45309'>$rv_h</span>" : '' ?></a>
+    <a href="pages/agendamentos.php"  class="nav-link-side <?= isActive('agendamentos.php') ?>"><i class="bi bi-calendar-check"></i>Agendamentos<?= $ag_h > 0 ? "<span class='badge-side'>$ag_h</span>" : '' ?></a>
+    <a href="pages/receitas.php"      class="nav-link-side <?= isActive('receitas.php') ?>"><i class="bi bi-file-medical"></i>Receitas<?= $rv_h > 0 ? "<span class='badge-side text-warning' style='background:#b45309'>$rv_h</span>" : '' ?></a>
 
     <div class="sidebar-section">Análises</div>
     <?php if (in_array($_SESSION['cargo'] ?? '', ['Gerente', 'Administrador', 'Farmacêutico'])): ?>
-    <a href="relatorios.php"    class="nav-link-side <?= isActive('relatorios.php') ?>"><i class="bi bi-graph-up-arrow"></i>Relatórios</a>
+    <a href="pages/relatorios.php"    class="nav-link-side <?= isActive('relatorios.php') ?>"><i class="bi bi-graph-up-arrow"></i>Relatórios</a>
     <?php endif; ?>
-    <a href="estoque.php"       class="nav-link-side <?= isActive('estoque.php') ?>"><i class="bi bi-clipboard2-pulse"></i>Estoque</a>
+    <a href="pages/estoque.php"       class="nav-link-side <?= isActive('estoque.php') ?>"><i class="bi bi-clipboard2-pulse"></i>Estoque</a>
   </nav>
   <div class="sidebar-footer">
-    <a href="logout.php" class="btn-logout"><i class="bi bi-box-arrow-left"></i>Sair do Sistema</a>
+    <a href="public/logout.php" class="btn-logout"><i class="bi bi-box-arrow-left"></i>Sair do Sistema</a>
   </div>
 </nav>
 
-<!-- MAIN -->
+
 <div class="main-content">
   <div class="topbar">
     <div>
