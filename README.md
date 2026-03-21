@@ -1,5 +1,7 @@
 # 💊 AFP — Sistema de Gestão Farmacêutica
 
+🇧🇷 Português | 🇺🇸 [English](#-english)
+
 > Sistema web completo para gestão de farmácias, com controle inteligente de estoque, vendas, clientes, agendamentos clínicos e relatórios gerenciais.
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
@@ -178,3 +180,127 @@ define('DB_PASS', 'sua_senha');
 ## 📄 Licença
 
 Este projeto está sob a licença MIT.
+
+---
+
+# 🇺🇸 English
+
+## 💊 AFP — Pharmacy Management System
+
+> Complete web system for pharmacy management, featuring smart control of inventory, sales, customers, clinical appointments, and management reports.
+
+---
+
+## 🚀 Demo
+
+🔗 **Live system:** [Open system](http://cacau.byethost6.com/login_afp.php)
+
+👤 **User:** `teste`  
+🔒 **Password:** `1234`
+
+---
+
+## ⚙️ Features
+
+### 📊 Dashboard
+- Sales indicators and daily revenue overview
+- Daily appointments
+- Alerts for low stock and expired prescriptions
+- Performance chart (last 7 days)
+- Quick access to main features
+
+### 💰 Sales Management
+- Multi-product sales registration
+- Discount application per sale
+- Payment methods: Cash, Debit, Credit, PIX
+- Automatic stock update
+- Full history with filters
+
+### 📦 Products and Inventory
+- Product registration with barcode, category, and expiration date
+- Minimum stock control with alerts
+- Movement tracking (in/out)
+- Identification of prescription-required products (RX)
+
+### 👥 Customers
+- Full customer registration (CPF, phone, email, address)
+- Quick search by name or CPF
+
+### 📅 Appointments
+- Services: blood pressure, glucose tests, injections, dressings, etc.
+- Status control: Scheduled, Completed, Cancelled, No-show
+- Filters by date and status
+
+### 📜 Prescriptions
+- Linked to patient and doctor (CRM)
+- Automatic expiration control
+- Status: Valid, Expired, Cancelled
+
+### 📈 Reports *(restricted)*
+- Sales by period and payment method
+- Best-selling products
+- Customer ranking
+- Appointment reports
+
+---
+
+## 🛠️ Technologies
+
+- **Backend:** PHP 7.4+
+- **Database:** MySQL / MariaDB
+- **Frontend:** HTML, CSS, Bootstrap 5.3
+- **Scripts:** JavaScript
+- **Charts:** Chart.js
+- **Icons:** Bootstrap Icons
+
+---
+
+## 🔐 Access Control
+
+The system includes role-based access control:
+
+| Role           | Employees | Reports | Other pages |
+|----------------|:---------:|:-------:|:-----------:|
+| Administrator  | ✅        | ✅      | ✅          |
+| Manager        | ✅        | ✅      | ✅          |
+| Pharmacist     | ❌        | ✅      | ✅          |
+| Attendant      | ❌        | ❌      | ✅          |
+| Assistant      | ❌        | ❌      | ✅          |
+
+> Permissions are validated in real time on the server.
+
+---
+
+## ⚙️ Installation
+
+### 1. Database
+- Create a MySQL database
+- Import the SQL script
+
+### 2. Configuration
+Create a `config.php` file:
+
+```php
+define('DB_HOST', 'your_host');
+define('DB_NAME', 'your_database');
+define('DB_USER', 'your_user');
+define('DB_PASS', 'your_password');
+```
+### 3. Run
+- Use a local server (XAMPP, Laragon, WAMP)
+- Access via browser:
+  http://localhost/afp-sistema-gestao-farmaceutica
+
+---
+
+## 🚀 Project Highlights
+🔐 **Role-based access control**
+📦 **Automatic stock updates**
+⚠️ **Smart alerts system**
+📊 **Real-time dashboard**
+📅 **Integrated modules**
+📈 **Advanced reports**
+🧩 **Modular architecture**
+💻 **User-friendly interface**
+
+---
