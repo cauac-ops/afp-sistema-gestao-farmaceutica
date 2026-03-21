@@ -1,12 +1,51 @@
 # afp-sistema-gestao-farmaceutica
 Sistema web de gestão farmacêutica com controle de vendas, estoque, clientes, agendamentos e relatórios, desenvolvido em PHP com foco em organização, segurança e boas práticas.
 
-# 💊 AFP — Agenda Farmacêutica de Planejamento
+# 💊 AFP — Sistema de Gestão Farmacêutica
 
-## 📌 Sobre o projeto
-O AFP é um sistema web completo de gestão farmacêutica, desenvolvido para auxiliar no controle de vendas, estoque, clientes, agendamentos clínicos, receitas médicas e relatórios gerenciais.
+> Sistema web completo para gerenciamento de farmácias e drogarias, com controle de vendas, estoque, clientes, agendamentos clínicos e receitas médicas.
 
-O sistema foi projetado com foco em organização, usabilidade e automação de processos comuns em farmácias e drogarias.
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![PHP](https://img.shields.io/badge/PHP-8.x-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+---
+
+## 🚀 Demonstração
+
+🔗 Acesse o sistema: [[LINK_DA_DEMO](http://cacau.byethost6.com/login_afp.php)]  
+👤 Usuário: `teste`  
+🔒 Senha: `1234`
+
+---
+
+## 📸 Preview do Sistema
+
+### 📊 Dashboard
+<p align="center">
+  <img src="assets/dashboard.png" width="800">
+</p>
+
+### 💰 Vendas
+<p align="center">
+  <img src="assets/vendas.png" width="800">
+</p>
+
+### 📦 Estoque
+<p align="center">
+  <img src="assets/estoque.png" width="800">
+</p>
+
+### 🛍️ Produtos
+<p align="center">
+  <img src="assets/produto.png" width="800">
+</p>
+
+### 📈 Relatórios
+<p align="center">
+  <img src="assets/relatorios.png" width="800">
+</p>
 
 ---
 
@@ -76,49 +115,6 @@ O sistema possui controle de permissões por cargo:
 | Auxiliar      | ❌           | ❌         | ✅             |
 
 > As permissões são validadas em tempo real no servidor.
-
----
-
-## 🔐 Acesso de demonstração
-
-O sistema está disponível para testes:
-
-🌐 http://cacau.byethost6.com/login_afp.php
-
-Credenciais:
-- Usuário: teste
-- Senha: 1234
-
-🔒 Esta conta possui acesso limitado para garantir a segurança do sistema.
-
----
-
-## 📷 Demonstração do sistema
-
-### 📊 Dashboard
-<p align="center">
-  <img src="assets/dashboard.png" width="800">
-</p>
-
-### 💰 Vendas
-<p align="center">
-  <img src="assets/vendas.png" width="800">
-</p>
-
-### 📦 Estoque
-<p align="center">
-  <img src="assets/estoque.png" width="800">
-</p>
-
-### 🛍️ Produtos
-<p align="center">
-  <img src="assets/produto.png" width="800">
-</p>
-
-### 📈 Relatórios
-<p align="center">
-  <img src="assets/relatorios.png" width="800">
-</p>
 
 ---
 
