@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Agendamentos';
-require_once 'header_afp.php';
+require_once 'components/header_afp.php';
 
 $db   = new Database();
 $conn = $db->connect();
@@ -119,7 +119,7 @@ if (!empty($_GET['ok'])) { $msg = htmlspecialchars($_GET['ok']); $tipo = 'succes
   </div>
 </div>
 
-<!-- Modal -->
+
 <div class="modal fade" id="modalAg" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -180,4 +180,4 @@ if (!empty($_GET['ok'])) { $msg = htmlspecialchars($_GET['ok']); $tipo = 'succes
   </div>
 </div>
 <?php if ($edit): ?><script>document.addEventListener('DOMContentLoaded',()=>new bootstrap.Modal(document.getElementById('modalAg')).show())</script><?php endif; ?>
-<?php require_once 'footer_afp.php'; ?>
+<?php require_once 'pages/footer_afp.php'; ?>
