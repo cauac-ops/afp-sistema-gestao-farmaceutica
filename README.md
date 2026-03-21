@@ -105,23 +105,20 @@ Credenciais:
   <img src="assets/vendas.png" width="800">
 </p>
 
-
-## 📷 Imagens do sistema
-
-### 📊 Dashboard
-![Dashboard](assets/dashboard.png)
-
-### 💰 Vendas
-![Vendas](assets/vendas.png)
-
 ### 📦 Estoque
-![Estoque](assets/estoque.png)
+<p align="center">
+  <img src="assets/estoque.png" width="800">
+</p>
 
 ### 🛍️ Produtos
-![Produtos](assets/produto.png)
+<p align="center">
+  <img src="assets/produto.png" width="800">
+</p>
 
 ### 📈 Relatórios
-![Relatórios](assets/relatorios.png)
+<p align="center">
+  <img src="assets/relatorio.png" width="800">
+</p>
 
 ---
 
