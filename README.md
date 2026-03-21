@@ -1,5 +1,5 @@
 # 💊 AFP — Sistema de Gestão Farmacêutica
-as
+
 <p align="center">
   <strong>💊 Pharmacy Management System</strong><br>
   <em>Complete web system for pharmacy operations</em>

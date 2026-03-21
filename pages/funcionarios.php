@@ -1,9 +1,9 @@
 <?php
 $page_title = 'Funcionários';
-require_once 'components/header_afp.php';
+require_once __DIR__ . '/../components/header_afp.php';
 if (!in_array($_SESSION['cargo'] ?? '', ['Gerente', 'Administrador'])) {
     echo '<div class="alert alert-danger"><i class="bi bi-shield-lock me-2"></i>Acesso restrito.</div>';
-    require_once 'components/footer_afp.php'; exit;
+    require_once __DIR__ . '/../components/footer_afp.php'; exit;
 }
 
 $db   = new Database();
@@ -155,4 +155,4 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-<?php require_once 'components/footer_afp.php'; ?>
+<?php require_once __DIR__ . '/../components/footer_afp.php'; ?>

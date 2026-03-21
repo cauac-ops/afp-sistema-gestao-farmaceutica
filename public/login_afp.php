@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once 'config.php';
+require_once __DIR__ . '/../config/config.php';
 
 if (isset($_SESSION['id_func'])) {
-    header('Location: pages/dashboard.php');
+    header('Location: ../pages/dashboard.php');
     exit;
 }
 
@@ -27,7 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['id_func']   = $func['id_func'];
                 $_SESSION['nome_func'] = $func['nome_func'];
                 $_SESSION['cargo']     = $func['cargo'];
-                header('Location: dashboard.php');
+                session_regenerate_id(true);
+                header('Location: ../pages/dashboard.php');
                 exit;
             } else {
                 $erro = 'Usuário ou senha inválidos.';
@@ -168,7 +169,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <p class="login-sub">Acesse sua conta para continuar</p>
 
     <?php if ($erro): ?>
-    <div class="alert-error"><i class="bi bi-exclamation-circle"></i><?= $erro ?></div>
+    <div class="alert-error"><i class="bi bi-exclamation-circle"></i><?= htmlspecialchars($erro, ENT_QUOTES, 'UTF-8') ?></div>
     <?php endif; ?>
 
     <form method="POST">
