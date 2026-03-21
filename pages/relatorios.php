@@ -13,7 +13,7 @@ $data_inicio = sanitize($_GET['di'] ?? date('Y-m-01'));
 $data_fim    = sanitize($_GET['df'] ?? date('Y-m-d'));
 $tipo        = sanitize($_GET['tipo'] ?? 'vendas');
 
-// === VENDAS ===
+
 if ($tipo === 'vendas') {
     $stmt = $conn->prepare("
         SELECT DATE(data_venda) as dia, COUNT(*) as qtd, SUM(valor_total) as total, forma_pagamento
@@ -44,7 +44,7 @@ if ($tipo === 'vendas') {
     $chart_vals   = array_map(fn($r) => (float)$r['total'], $evolucao);
 }
 
-// === PRODUTOS ===
+
 if ($tipo === 'produtos') {
     $stmt = $conn->prepare("
         SELECT p.nome_prod, p.cod_bar_prod, p.estoque_atual, p.estoque_minimo, p.preco_venda,
@@ -60,7 +60,7 @@ if ($tipo === 'produtos') {
     $dados = $stmt->fetchAll();
 }
 
-// === CLIENTES ===
+
 if ($tipo === 'clientes') {
     $stmt = $conn->prepare("
         SELECT c.nome_cli, c.cpf_cli, c.telefone_cli,
@@ -77,7 +77,7 @@ if ($tipo === 'clientes') {
     $dados = $stmt->fetchAll();
 }
 
-// === AGENDAMENTOS ===
+
 if ($tipo === 'agendamentos') {
     $stmt = $conn->prepare("
         SELECT a.tipo_servico, a.status, a.data_agenda, a.valor_servico, c.nome_cli
