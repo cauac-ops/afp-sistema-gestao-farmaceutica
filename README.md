@@ -1,6 +1,3 @@
-# afp-sistema-gestao-farmaceutica
-Sistema web de gestão farmacêutica com controle de vendas, estoque, clientes, agendamentos e relatórios, desenvolvido em PHP com foco em organização, segurança e boas práticas.
-
 # 💊 AFP — Sistema de Gestão Farmacêutica
 
 > Sistema web completo para gestão de farmácias, com controle inteligente de estoque, vendas, clientes, agendamentos clínicos e relatórios gerenciais.
