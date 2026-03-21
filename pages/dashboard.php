@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 $page_title = 'Dashboard';
-require_once 'header_afp.php';
+require_once 'components/header_afp.php';
 
 $db   = new Database();
 $conn = $db->connect();
@@ -116,4 +116,4 @@ new Chart(ctx, {
 });
 </script>
 
-<?php require_once 'footer_afp.php'; ?>
+<?php require_once 'components/footer_afp.php'; ?>
