@@ -138,15 +138,16 @@ O sistema possui controle de permissões por cargo:
 - Crie um banco no MySQL
 - Importe o script SQL do projeto
 
-### 2. Configuração
-Crie um arquivo `config.php` com suas credenciais:
+### 2. Configuração do ambiente
+- Crie um arquivo chamado `.env` na raiz do projeto (caso não exista)
+- Configure as variáveis de conexão com o banco de dados:
 
-```php
-define('DB_HOST', 'seu_host');
-define('DB_NAME', 'seu_banco');
-define('DB_USER', 'seu_usuario');
-define('DB_PASS', 'sua_senha');
-```
+```env
+DB_HOST=seu_host
+DB_NAME=seu_banco
+DB_USER=seu_usuario
+DB_PASS=sua_senha
+
 ### 3. Execução
 - Utilize um servidor local (XAMPP, Laragon ou WAMP)
 - Acesse o projeto via navegador:
