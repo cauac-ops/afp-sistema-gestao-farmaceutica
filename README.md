@@ -139,7 +139,6 @@ define('DB_NAME', 'seu_banco');
 define('DB_USER', 'seu_usuario');
 define('DB_PASS', 'sua_senha');
 ```
-
 ### 3. Execução
 - Utilize um servidor local (XAMPP, Laragon ou WAMP)
 - Acesse o projeto via navegador:
