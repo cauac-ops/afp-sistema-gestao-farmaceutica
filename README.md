@@ -147,6 +147,34 @@ define('DB_PASS', 'sua_senha');
   
 ---
 
+## 🚀 Diferenciais do Projeto
+
+- 🔐 **Controle de acesso por níveis de usuário**  
+  Sistema com permissões bem definidas por cargo, garantindo segurança e organização das operações.
+
+- 📦 **Atualização automática de estoque**  
+  Cada venda realizada impacta diretamente o estoque, evitando inconsistências.
+
+- ⚠️ **Alertas inteligentes**  
+  Identificação automática de produtos com estoque baixo e receitas vencidas.
+
+- 📊 **Dashboard com indicadores em tempo real**  
+  Visualização rápida de dados importantes para tomada de decisão.
+
+- 📅 **Integração entre módulos**  
+  Clientes, receitas, vendas e agendamentos conectados em um único sistema.
+
+- 📈 **Relatórios gerenciais completos**  
+  Análise de desempenho, vendas e comportamento dos clientes.
+
+- 🧩 **Arquitetura modular**  
+  Código organizado facilitando manutenção e expansão do sistema.
+
+- 💻 **Interface intuitiva**  
+  Foco em usabilidade para facilitar o uso no dia a dia de farmácias.
+
+---
+
 ## 📄 Licença
 
 Este projeto está sob a licença MIT.
