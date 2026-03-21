@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'seu_banco');
 define('DB_USER', 'seu_usuario');
-define('DB_PASS', 'sua_senha');
+define('DB_PASS', getenv('DB_PASS'));
 
 define('APP_NAME', 'AFP - Agenda Farmacêutica de Planejamento');
 
