@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Histórico de Vendas';
-require_once 'components/header_afp.php';
+require_once __DIR__ . '/../components/header_afp.php';
 
 $db   = new Database();
 $conn = $db->connect();
@@ -138,4 +138,4 @@ function verItens(id) {
 }
 </script>
 
-<?php require_once 'components/footer_afp.php'; ?>
+<?php require_once __DIR__ . '/../components/footer_afp.php'; ?>

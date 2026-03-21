@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Gestão de Estoque';
-require_once 'components/header_afp.php';
+require_once __DIR__ . '/../components/header_afp.php';
 
 $db   = new Database();
 $conn = $db->connect();
@@ -170,4 +170,4 @@ $estoque_baixo = array_filter($produtos, fn($p) => $p['estoque_atual'] <= $p['es
   </div>
 </div>
 
-<?php require_once 'components/footer_afp.php'; ?>
+<?php require_once __DIR__ . '/../components/footer_afp.php'; ?>

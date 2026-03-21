@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Receitas';
-require_once 'components/header_afp.php';
+require_once __DIR__ . '/../components/header_afp.php';
 
 $db   = new Database();
 $conn = $db->connect();
@@ -186,4 +186,4 @@ if (!empty($_GET['ok'])) { $msg = htmlspecialchars($_GET['ok']); $tipo = 'succes
 <?php if ($edit): ?>
 <script>document.addEventListener('DOMContentLoaded',()=>new bootstrap.Modal(document.getElementById('modalRec')).show())</script>
 <?php endif; ?>
-<?php require_once 'components/footer_afp.php'; ?>
+<?php require_once __DIR__ . '/../components/footer_afp.php'; ?>
