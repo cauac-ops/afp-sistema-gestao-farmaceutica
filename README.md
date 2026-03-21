@@ -3,7 +3,7 @@ Sistema web de gestão farmacêutica com controle de vendas, estoque, clientes, 
 
 # 💊 AFP — Sistema de Gestão Farmacêutica
 
-> Sistema web completo para gerenciamento de farmácias e drogarias, com controle de vendas, estoque, clientes, agendamentos clínicos e receitas médicas.
+> Sistema web completo para gestão de farmácias, com controle inteligente de estoque, vendas, clientes e agendamentos clínicos.
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
