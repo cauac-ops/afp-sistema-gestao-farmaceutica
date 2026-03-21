@@ -93,6 +93,19 @@ Credenciais:
 
 ---
 
+## 📷 Demonstração do sistema
+
+### 📊 Dashboard
+<p align="center">
+  <img src="assets/dashboard.png" width="800">
+</p>
+
+### 💰 Vendas
+<p align="center">
+  <img src="assets/vendas.png" width="800">
+</p>
+
+
 ## 📷 Imagens do sistema
 
 ### 📊 Dashboard
