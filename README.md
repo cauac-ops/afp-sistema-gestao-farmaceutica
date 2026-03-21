@@ -6,9 +6,13 @@ Sistema web de gestão farmacêutica com controle de vendas, estoque, clientes, 
 > Sistema web completo para gerenciamento de farmácias e drogarias, com controle de vendas, estoque, clientes, agendamentos clínicos e receitas médicas.
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![PHP](https://img.shields.io/badge/PHP-8.x-blue)
-![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
+![Last Commit](https://img.shields.io/github/last-commit/cauac-ops/afp-sistema-gestao-farmaceutica)
+![Repo Size](https://img.shields.io/github/repo-size/cauac-ops/afp-sistema-gestao-farmaceutica)
 
 ---
 
