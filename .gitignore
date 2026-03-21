@@ -1,1 +1,12 @@
+#senciveis
+config.php
+.env
 
+#depende.
+/vendor
+/node_modules
+
+#sis.
+*.log
+*.cache
+.DS_Store
