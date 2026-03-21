@@ -1,12 +1,12 @@
 <?php
 $page_title = 'Gestão de Estoque';
-require_once 'header_afp.php';
+require_once 'components/header_afp.php';
 
 $db   = new Database();
 $conn = $db->connect();
 $msg  = ''; $tipo = '';
 
-// Registrar movimentação
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id_prod   = (int)$_POST['id_prod'];
     $tipo_mov  = sanitize($_POST['tipo_mov']);
@@ -25,11 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Produtos
+
 $produtos = $conn->query("SELECT p.*, c.nome_cat FROM produto p LEFT JOIN categoria c ON p.id_cat = c.id_cat ORDER BY p.nome_prod")
                  ->fetchAll(PDO::FETCH_ASSOC);
 
-// Últimas movimentações
 $movs = $conn->query("SELECT m.*, p.nome_prod, f.nome_func FROM movimentacao_estoque m
                       JOIN produto p ON m.id_prod = p.id_prod
                       JOIN funcionario f ON m.id_func = f.id_func
@@ -46,7 +45,7 @@ $estoque_baixo = array_filter($produtos, fn($p) => $p['estoque_atual'] <= $p['es
 </div>
 <?php endif; ?>
 
-<!-- Alertas de estoque baixo -->
+
 <?php if (count($estoque_baixo) > 0): ?>
 <div class="alert" style="background:#fef2f2;border:1px solid #fecaca;border-radius:10px;margin-bottom:16px">
   <div class="d-flex align-items-center gap-2 mb-2">
@@ -62,7 +61,7 @@ $estoque_baixo = array_filter($produtos, fn($p) => $p['estoque_atual'] <= $p['es
 <?php endif; ?>
 
 <div class="row g-3">
-  <!-- Registrar Movimentação -->
+  
   <div class="col-md-4">
     <div class="card">
       <div class="card-header" style="background:var(--green);color:white">
@@ -106,7 +105,7 @@ $estoque_baixo = array_filter($produtos, fn($p) => $p['estoque_atual'] <= $p['es
     </div>
   </div>
 
-  <!-- Tabela de produtos -->
+
   <div class="col-md-8">
     <div class="card">
       <div class="card-header" style="background:white;border-bottom:1px solid var(--border)">
@@ -142,7 +141,7 @@ $estoque_baixo = array_filter($produtos, fn($p) => $p['estoque_atual'] <= $p['es
     </div>
   </div>
 
-  <!-- Histórico de movimentações -->
+
   <div class="col-12">
     <div class="card">
       <div class="card-header" style="background:white;border-bottom:1px solid var(--border)">
@@ -171,4 +170,4 @@ $estoque_baixo = array_filter($produtos, fn($p) => $p['estoque_atual'] <= $p['es
   </div>
 </div>
 
-<?php require_once 'footer_afp.php'; ?>
+<?php require_once 'components/footer_afp.php'; ?>
