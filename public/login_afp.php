@@ -3,7 +3,7 @@ session_start();
 require_once 'config.php';
 
 if (isset($_SESSION['id_func'])) {
-    header('Location: dashboard.php');
+    header('Location: pages/dashboard.php');
     exit;
 }
 
