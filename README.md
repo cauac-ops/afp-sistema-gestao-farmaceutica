@@ -54,7 +54,7 @@
 
 ---
 
-## 🚀 Funcionalidades
+## ⚙️ Funcionalidades
 
 ### 📊 Dashboard
 - Indicadores de vendas e receita diária
@@ -98,13 +98,14 @@
 
 ---
 
-## 🛠️ Tecnologias utilizadas
-- PHP 7.4+
-- MySQL / MariaDB
-- HTML, CSS e Bootstrap 5.3
-- JavaScript
-- Chart.js
-- Bootstrap Icons
+## 🛠️ Tecnologias
+
+- **Backend:** PHP 7.4+
+- **Banco de dados:** MySQL / MariaDB
+- **Frontend:** HTML, CSS, Bootstrap 5.3
+- **Scripts:** JavaScript
+- **Gráficos:** Chart.js
+- **Ícones:** Bootstrap Icons
 
 ---
 
@@ -132,8 +133,20 @@ O sistema possui controle de permissões por cargo:
 ### 2. Configuração
 Crie um arquivo `config.php` com suas credenciais:
 
+### 3. Execução
+- Utilize um servidor local (XAMPP, Laragon ou WAMP)
+- Acesse o projeto via navegador:
+  http://localhost/afp-sistema-gestao-farmaceutica
+
 ```php
 define('DB_HOST', 'seu_host');
 define('DB_NAME', 'seu_banco');
 define('DB_USER', 'seu_usuario');
 define('DB_PASS', 'sua_senha');
+```php
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
