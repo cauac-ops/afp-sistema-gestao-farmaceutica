@@ -147,7 +147,7 @@ DB_HOST=seu_host
 DB_NAME=seu_banco
 DB_USER=seu_usuario
 DB_PASS=sua_senha
-
+```
 ### 3. Execução
 - Utilize um servidor local (XAMPP, Laragon ou WAMP)
 - Acesse o projeto via navegador:
