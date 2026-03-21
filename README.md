@@ -117,7 +117,7 @@ Credenciais:
 
 ### 📈 Relatórios
 <p align="center">
-  <img src="assets/relatorio.png" width="800">
+  <img src="assets/relatorios.png" width="800">
 </p>
 
 ---
