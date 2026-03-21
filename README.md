@@ -21,9 +21,10 @@ Sistema web de gestão farmacêutica com controle de vendas, estoque, clientes, 
 
 ## 🚀 Demonstração
 
-🔗 Acesse o sistema: [[LINK_DA_DEMO](http://cacau.byethost6.com/login_afp.php)]  
-👤 Usuário: `teste`  
-🔒 Senha: `1234`
+🔗 **Sistema online:** [Abrir sistema](http://cacau.byethost6.com/login_afp.php)
+
+👤 **Usuário:** `teste`  
+🔒 **Senha:** `1234`
 
 ---
 
