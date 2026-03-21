@@ -26,6 +26,7 @@
 ---
 
 ## 📸 Preview do Sistema
+> Interface do sistema em diferentes módulos
 
 ### 📊 Dashboard
 <p align="center">
@@ -81,7 +82,7 @@
 - Busca rápida por nome ou CPF
 
 ### 📅 Agendamentos
-- Serviços: pressão, glicemia, injetáveis, curativos, etc.
+- Serviços clínicos: aferição de pressão, glicemia, aplicações injetáveis, curativos, entre outros
 - Controle de status: Agendado, Concluído, Cancelado, Faltou
 - Filtros por data e status
 
