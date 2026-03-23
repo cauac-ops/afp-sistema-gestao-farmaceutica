@@ -25,7 +25,7 @@
 
 ## 🚀 Demonstração
 
-🔗 **Sistema online:** [Abrir sistema](http://cacau.byethost6.com/login_afp.php)
+🔗 **Sistema online:** [Abrir sistema](http://cacau.byethost6.com/)
 
 👤 **Usuário:** `teste`  
 🔒 **Senha:** `1234`
@@ -199,7 +199,7 @@ Este projeto está sob a licença MIT.
 
 ## 🚀 Demo
 
-🔗 **Live system:** [Open system](http://cacau.byethost6.com/login_afp.php)
+🔗 **Live system:** [Open system](http://cacau.byethost6.com/)
 
 👤 **User:** `teste`  
 🔒 **Password:** `1234`
