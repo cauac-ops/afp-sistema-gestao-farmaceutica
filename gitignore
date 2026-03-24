@@ -1,8 +1,0 @@
-config/config.php
-sessions/
-uploads/
-*.log
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
